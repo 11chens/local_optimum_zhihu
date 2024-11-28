@@ -5,7 +5,7 @@
 
 我们不妨从一个常见的机器人导航场景来引入：
 
-<img src="./imgs/main.png" alt="main" style="zoom:50%;" />
+<img src="./imgs/navigation.png" alt="navigation" style="zoom:30%;" />
 
 有两个Robot  R1、R2 分别从A点出发，目标是以最短路径无碰撞地到达终点。在这个问题中，R1采取的就是局部最优策略：既然终点就在我的水平方向，那我只需要沿着水平方向走，尽可能减小竖直方向的运动。我们可以看到，在起步阶段，R1由于沿着水平虚线前进，的确相较于R2更接近终点。然而在路程的中后段，我们发现R1水平方向的轨迹上存在大量障碍物，因此不得不绕行，最终绕了一个大弯才抵达终点，这个过程中R1自己也人为它的每一步都走在了当前时刻的最优解。而相比之下，R2虽然一开始落后于R1，但是这条路径存在的障碍物更少，更快地到达了终点。（这里来一点成功学鸡汤：人生起步慢一点走些弯路没关系，只要一直朝着目标，也许会更快到达终点。）
 
@@ -79,7 +79,7 @@ $$f\left(x^{(k)} + d\right) = f\left(x^{(k)}\right) + d^T \nabla f\left(x^{(k)}\
 
 我们从Taylor展开式的图像入手来解释这个问题，以$x=0$处$sinx$的Taylor展开为例：
 
-<img src="./taylor_expansion_sin.png" alt="taylor_expansion_sin" style="zoom:20%;" />
+<img src="./imgs/taylor_expansion_sin.png" alt="taylor_expansion_sin" style="zoom:20%;" />
 
 
 
@@ -113,4 +113,4 @@ $$x^{(k+1)} = x^{(k)} - \nabla^2 f(x^{(k)})^{-1} \nabla f(x^{(k)})$$
 
 可以看出最速下降法的收敛性明显不如牛顿法，然而牛顿法虽然能感受更大的视野，但是其探索方向未必就是下降方向，因此最终收敛的结果也未必比最速下降法好。
 
-![image-20241128224316388](C:\Users\86155\AppData\Roaming\Typora\typora-user-images\image-20241128224316388.png)
+![image-20241128224316388](.\imgs\CustomEmotion.png)
