@@ -43,7 +43,7 @@ $$f\left(x^{(k)}+\lambda_{k} d^{(k)}\right)=\min_{\lambda \geq 0} f\left(x^{(k)}
 
 我们来看最终的收敛效果：
 
-![orth](.\imgs\orth.png)
+![orth](./imgs/orth.png)
 
 
 
