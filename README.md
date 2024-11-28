@@ -53,11 +53,13 @@ $$f\left(x^{(k)}+\lambda_{k} d^{(k)}\right)=\min_{\lambda \geq 0} f\left(x^{(k)}
 
 令：$\varphi(\lambda) = f\left(x^{(k)} + \lambda d^{(k)}\right)$，$$d^{(k)} = -\nabla f\left(x^{(k)}\right)$$
 
+
 为求出从$ x^{(k)}$ 出发沿方向 $ d^{(k)}$的极小点，令：
 
 $$\varphi'(\lambda_k) = \nabla f\left(x^{(k)} + \lambda_k d^{(k)}\right)^T d^{(k)} = 0$$
 
 得：$$-\nabla f\left(x^{(k+1)}\right)^T \nabla f\left(x^{(k)}\right) = 0$$
+
 
 所以 $d^{(k+1)} = -\nabla f\left(x^{(k+1)}\right)$ 与 $d^{(k)} = -\nabla f\left(x^{(k)}\right) $ 正交
 
@@ -71,9 +73,15 @@ $$\varphi'(\lambda_k) = \nabla f\left(x^{(k)} + \lambda_k d^{(k)}\right)^T d^{(k
 
 我们选择下降最快的负梯度方向作为搜索方向其实是默认了一个隐含条件：将Taylor展开中的线性项作为了目标函数的近似，即：
 
-$$-\nabla f\left(x^{(k)}\right) = \arg\min \left\{ f\left(x^{(k)}\right) + d^T \nabla f\left(x^{(k)}\right) \mid \|d\| \leq 1 \right\}$$
+$$
+-\nabla f\left(x^{(k)}\right) = \arg\min \left\{ f\left(x^{(k)}\right) + d^T \nabla f\left(x^{(k)}\right) \mid \|d\| \leq 1 \right\}
+$$
 
-$$f\left(x^{(k)} + d\right) = f\left(x^{(k)}\right) + d^T \nabla f\left(x^{(k)}\right) + o(d)$$
+
+$$
+f\left(x^{(k)} + d\right) = f\left(x^{(k)}\right) + d^T \nabla f\left(x^{(k)}\right) + o\left(d\right)
+$$
+
 
 那么，大家有没有发现一个矛盾：我们**用最不准确的拟合方式，却能得到最快的下降方向**。
 
@@ -112,5 +120,5 @@ $$x^{(k+1)} = x^{(k)} - \nabla^2 f(x^{(k)})^{-1} \nabla f(x^{(k)})$$
 
 
 可以看出最速下降法的收敛性明显不如牛顿法，然而牛顿法虽然能感受更大的视野，但是其探索方向未必就是下降方向，因此最终收敛的结果也未必比最速下降法好。
+<img src="./imgs/CustomEmotion.png" alt="output" style="zoom:100%;" />
 
-![image-20241128224316388](.\imgs\CustomEmotion.png)
