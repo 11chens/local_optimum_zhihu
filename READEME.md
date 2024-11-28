@@ -103,7 +103,7 @@ $$x^{(k+1)} = x^{(k)} - \nabla^2 f(x^{(k)})^{-1} \nabla f(x^{(k)})$$
 
 为了比较两种算法，我用python写一个了对Rosenbrock函数的搜索路径.gif，来展示二者收敛情况：
 
-函数实现与GIF制作代码：
+函数实现与GIF制作代码：[plt_func.py](plt_func.py), [out_gif.py](out_gif.py) 
 
 
 
