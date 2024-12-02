@@ -1,4 +1,10 @@
-## 每一步局部最优$\stackrel{?}{=}$全局最优 —— 从Taylor展开的上帝视角直观理解
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+## 累计局部最优VS全局最优 —— 从Taylor展开的上帝视角直观理解
+
+知乎原文链接：https://zhuanlan.zhihu.com/p/9665060052
 
 过去我们常常听到一个问题：**人生的每一步都走到了局部最优，是否意味着实现了全局最优？**
 在经过不长的思考后，大家总会给出答案：**No**。然而，不知道有多少童鞋会进一步思考：这是什么原因导致的？
@@ -111,7 +117,9 @@ $$x^{(k+1)} = x^{(k)} - \nabla^2 f(x^{(k)})^{-1} \nabla f(x^{(k)})$$
 
 为了比较两种算法，我用python写一个了对Rosenbrock函数的搜索路径.gif，来展示二者收敛情况：
 
-函数实现与GIF制作代码：[plt_func.py](plt_func.py), [out_gif.py](out_gif.py) 
+<!-- 函数实现与GIF制作代码：[plt_func.py](plt_func.py), [out_gif.py](out_gif.py)  -->
+
+函数实现与GIF制作代码：https://github.com/11chens/local_optimum_zhihu 
 
 
 
